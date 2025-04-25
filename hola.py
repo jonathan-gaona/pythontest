@@ -49,4 +49,4 @@
 # elif edad>=18 and edad<=64:
 #     print("usted es adulto")    
 # else: 
-#     print("usted es un adulto mayor")        
+#     print("usted es un adulto mayor")
