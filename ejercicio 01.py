@@ -10,4 +10,4 @@ if  resultado % == 0:
     pares += 1
     print("los pares son: ", pares)
 
-     
+#asd  
