@@ -15,9 +15,18 @@ def resta():
     print("el resultado de la resta es: ", n1-n2)
 
 def divi():
-    n1=int(input("ingrese un numero"))
-    n2=int(input("ingrese otro numero"))
-    print("el resultado de la division es: ", n1/n2)
+    try:
+        n1=int(input("ingrese un numero"))
+        n2=int(input("ingrese otro numero"))
+        print("el resultado de la division es: ", n1/n2)
+    except ZeroDivisionError as nombre_de_excepcion:
+        print(f"Se produjo una excepción: {nombre_de_excepcion}")
+    else:
+        print("No se produjo ninguna excepción")
+    
+        
+
+
 
 def multi():
     n1=int(input("ingrese un numero"))
@@ -26,31 +35,35 @@ def multi():
 
 def calculadora():
     while True:
-        op=int(input("""ingrese una opcion
-                    1- suma
-                    2- resta
-                    3- multiplicacion
-                    4- division 
-                    5- salir 
-                    """))
-        match op:
-            case 1:
-                print("suma ")
-                suma()
-            case 2:
-                print("resta ")
-                resta()
-            case 3:
-                print("multiplicacion ")
-                multi()
-            case 4: 
-                print("division ") 
-                divi()   
-            case 5:
-                print("saliendo....")
-                break    
-            case _:
-                print("opcion invalida ")
+        try:
+            op=int(input("""ingrese una opcion
+                        1- suma
+                        2- resta
+                        3- multiplicacion
+                        4- division 
+                        5- salir 
+                        """))
+            match op:
+                case 1:
+                    print("suma ")
+                    suma()
+                case 2:
+                    print("resta ")
+                    resta()
+                case 3:
+                    print("multiplicacion ")
+                    multi()
+                case 4: 
+                    print("division ") 
+                    divi()   
+                case 5:
+                    print("saliendo....")
+                    break    
+                case _:
+                    print("opcion invalida ")
+        except Exception:
+                print("se puede ingresar solo numeros ")   
+      
                            
 def adivine():
     n1=int(input("ingrese el limite inferior a adivinar "))
@@ -88,3 +101,10 @@ def ludo():
             print("J2 sacó: ",dado)
             print("avanza hasta la casilla ",j2)
 
+calculadora()
+
+
+# try:
+#     op=int(input("ingrese un numero"))
+# except Exception:
+#     print("se puede ingresar solo numeros ")    
