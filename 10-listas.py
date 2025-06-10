@@ -18,3 +18,11 @@ print("------------------")
 lenguajes.insert(7,"hola")
 print(lenguajes)
 print("------------------")
+# mostrar indice del elemento
+print(lenguajes.index(3))
+print("------------------")
+# recorrer lista
+for lenguaje in lenguajes:
+    print(lenguaje+1)
+    print("-----------------")
+
