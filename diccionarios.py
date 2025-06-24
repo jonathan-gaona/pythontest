@@ -47,7 +47,7 @@ match op:
         val=input("ingrese el precio ")
     case 2:
         print(frutas)
-        frutas[fru]=val
+        # frutas[fru]=val
         print(frutas)
     case 3:
         print(frutas)
